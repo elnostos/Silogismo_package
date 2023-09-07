@@ -11,7 +11,6 @@
 #' silogismo2 <- primer_silogismo("Hombre", "Animal", "Piedra", "EAE");
 #' @export
 
-
 primer_silogismo <- function(mayor, medio, menor, modo) {
   if(modo=="BARBARA"| modo =="AAA") {
     print(paste("P1:", "Todo(a)", medio, "es", mayor)) 
@@ -68,7 +67,6 @@ segundo_silogismo <- function(mayor, medio, menor, modo) {
     print("Forma invalida de la segunda figura del silogismo")
   }
 }
-
 
 #' Tercera figura del silogismo
 #'
@@ -132,7 +130,6 @@ tercer_silogismo <- function(mayor, medio, menor, modo) {
 #' silogismo2 <- cuarto_silogismo("Hombre", "Animal", "Piedra", "EAO");
 #' @export
 
-
 cuarto_silogismo <- function(mayor, medio, menor, modo) {
   if(modo=="BAMALIP"| modo =="AAI") {
     print(paste("P1:", "Todo(a)", mayor, "es", medio)) 
@@ -164,7 +161,7 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
   }
 }
 
-#' Silogismo
+#' Figura Silogismo
 #'
 #' Si el modo es válido, devuelve la figura indicada del silogismo a partir de los términos definidos.
 #' Si el modo es inválido, devuelve una advertencia. 
@@ -179,7 +176,7 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
 #' silogismo2 <- Silogismo("Hombre", "Animal", "Piedra", "AAA", 1);
 #' @export
 
-Silogismo <- function(mayor, medio, menor, modo, figura) {
+figura_silogismo <- function(mayor, medio, menor, modo, figura) {
   if(figura=="Primera" | figura==1){
     primer_silogismo(mayor, medio, menor, modo)
   } else if(figura=="Segunda" | figura==2){
@@ -192,8 +189,6 @@ Silogismo <- function(mayor, medio, menor, modo, figura) {
     print("Ingrese una figura válida")
   }
 }
-<<<<<<< HEAD
-
 
 #' Forma axiomática
 #'
@@ -272,7 +267,6 @@ forma_axiomatica <- function(modo, figura) {
   }
 }
 
-
 #' Forma axiomática para reducción al absurdo
 #'
 #' Si el modo es válido, devuelve la forma axiomática del primer silogismo para resolver por reducción al absurdo. 
@@ -283,7 +277,6 @@ forma_axiomatica <- function(modo, figura) {
 #' forma_absurdo_silogismo1 <- forma_reduccion_absurdo("BAROCO", "Segunda");
 #' forma_absurdo_silogismo2 <- forma_reduccion_absurdo("IAI", "Cuarta");
 #' @export
-
 
 forma_reduccion_absurdo <- function(modo, figura) {
   if(modo=="CESARE" & (figura!=2)){
@@ -385,7 +378,6 @@ conversion <- function(primer_termino, segundo_termino, tipo_proposicion){
   }
 }
 
-
 #' Contradicción
 #'
 #' Devuelve la proposición original y su contradicción para los términos y el tipo de proposición específicados. 
@@ -419,7 +411,6 @@ contradiccion <- function(primer_termino, segundo_termino, tipo_proposicion){
     print("Ingrese valores validos")
   }
 }
-
 
 #' Subordinación
 #'
@@ -489,8 +480,6 @@ oposicion <- function(primer_termino, segundo_termino, tipo_proposicion){
   }
 }
 
-
-
 #' Cuadro de Boecio o de oposición de los juicios
 #'
 #' Devuelve la proposición original, su opuesta, subordinada y contradictoria para los términos y el tipo de proposición específicados. 
@@ -502,7 +491,6 @@ oposicion <- function(primer_termino, segundo_termino, tipo_proposicion){
 #' Boecio1 <- Boecio("Hombre", "Humano", "O");
 #' Boecio2 <- Boecio("Caballo", "Animal", "Universal Afirmativa");
 #' @export
-
 
 Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
   if(tipo_proposicion=="A"|tipo_proposicion=="Universal afirmativa"){
@@ -525,4 +513,3 @@ Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
     print("Ingrese valores válidos")
   }
 }
-
