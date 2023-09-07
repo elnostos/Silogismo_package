@@ -30,7 +30,7 @@ primer_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P2:", "Algun(a)", menor, "es", medio))
     print(paste("Conclusion:", "Algun(a)", menor, "no es", mayor))
   } else {
-    print("Figura invalida del primer silogismo")
+    print("Forma invalida de la primera figura del silogismo")
   }
 }
 
@@ -65,7 +65,7 @@ segundo_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P2:", "Algun(a)", menor, "no es", medio)) 
     print(paste("Conclusion:", "Algun(a)", menor, "no es", mayor))
   } else {
-    print("Figura invalida del segundo silogismo")
+    print("Forma invalida de la segunda figura del silogismo")
   }
 }
 
@@ -115,7 +115,7 @@ tercer_silogismo <- function(mayor, medio, menor, modo) {
                 menor)) 
     print(paste("Conclusion:", "Algun(a)", menor, "no es", mayor))
   } else {
-    print("Figura invalida del tercer silogismo")
+    print("Forma invalida de la tercera figura del silogismo")
   }
 }
 
@@ -160,7 +160,7 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
                 menor)) 
     print(paste("Conclusion:", "Algun(a)", menor, "no es", mayor))
   } else {
-    print("Figura invalida del cuarto silogismo")
+    print("Forma invalida de la cuarta figura del silogismo")
   }
 }
 
@@ -192,6 +192,7 @@ Silogismo <- function(mayor, medio, menor, modo, figura) {
     print("Ingrese una figura válida")
   }
 }
+<<<<<<< HEAD
 
 
 #' Forma axiomática
@@ -524,3 +525,4 @@ Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
     print("Ingrese valores válidos")
   }
 }
+
