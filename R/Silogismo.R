@@ -26,7 +26,7 @@ primer_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P1:", "Ningun(a)", medio, "es", mayor, "/", "P2:", "Algun(a)", menor, "es",
                 medio, "/", "Conclusion:", "Algun(a)", menor, "no es", mayor, sep=" "))
   } else {
-    print("Figura invalida del primer silogismo")
+    print("Forma invalida de la primera figura del silogismo")
   }
 }
 
@@ -57,7 +57,7 @@ segundo_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P1:", "Todo(a)", mayor, "es", medio, "/", "P2:", "Algun(a)", menor, "no es",
                 medio, "/", "Conclusion:", "Algun(a)", menor, "no es", mayor, sep=" "))
   } else {
-    print("Figura invalida del segundo silogismo")
+    print("Forma invalida de la segunda figura del silogismo")
   }
 }
 
@@ -95,7 +95,7 @@ tercer_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P1:", "Ningun(a)", medio, "es", mayor, "/", "P2:", "Todo(a)", medio, "es",
                 menor, "/", "Conclusion:", "Algun(a)", menor, "no es", mayor, sep=" "))
   } else {
-    print("Figura invalida del tercer silogismo")
+    print("Forma invalida de la tercera figura del silogismo")
   }
 }
 
@@ -130,7 +130,7 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
     print(paste("P1:", "Ningun(a)", mayor, "es", medio, "/", "P2:", "Algun(a)", medio, "es",
                 menor, "/", "Conclusion:", "Algun(a)", menor, "no es", mayor, sep=" "))
   } else {
-    print("Figura invalida del cuarto silogismo")
+    print("Forma invalida de la cuarta figura del silogismo")
   }
 }
 
