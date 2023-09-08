@@ -3,3 +3,4 @@ Type: Package
 Title: Crea silogismos en las cuatro primeras figuras a partir de los terminos mayor, medio, menor, el modo y la figura especificada
 Version: 0.0.1.0
 RoxygenNote: 7.2.3
+Encoding: UTF-8

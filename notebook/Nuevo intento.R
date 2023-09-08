@@ -56,6 +56,8 @@ silogismo<-function(mayor, medio, menor, forma, figura){
   print(paste("Primera premisa:", primera))
   print(paste("Segunda premisa:", segunda))
   print(paste("Conclusion:", conclusion))
+  
+  silo<-c(primera,segunda,conclusion)
 }
 
-
+ 

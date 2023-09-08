@@ -513,3 +513,30 @@ Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
     print("Ingrese valores válidos")
   }
 }
+
+#' Figura Silogismo
+#'
+#' A partir de la definicion de los sujetos y predicados de las premisas, asi como del termino medio, devuelve la figura del silogismo correspondiente. 
+#' @param predicado1 Corresponde al predicado de la primera premisa.
+#' @param sujeto1 Corresponde al sujeto de la primera premisa.
+#' @param predicado2 Corresponde al predicado de la segunda premisa.
+#' @param sujeto2 Corresponde al sujeto de la segunda premisa.
+#' @param termino_medio Corresponde al termino medio del silogismo.
+#' @examples 
+#' figura1 <- numero_figura("Hombre", "Caballo", "Animal", "Caballo", "Caballo");
+#' figura2 <- numero_figura("Hombre", "Caballo", "Caballo", "Animal", "Caballo");
+#' @export
+
+numero_figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio){
+  if(termino_medio==sujeto1 & termino_medio==predicado2){
+    print("Primera figura del silogismo")
+  } else if(termino_medio==predicado1 & termino_medio==predicado2){
+    print("Segunda figura del silogismo")
+  } else if(termino_medio==sujeto1 & termino_medio==sujeto2){
+    print("Tercera figura del silogismo")
+  } else if(termino_medio==predicado1 & termino_medio==sujeto2){
+    print("Cuarta figura del silogismo")
+  } else {
+    print("Ingrese valores validos")
+  }
+}
