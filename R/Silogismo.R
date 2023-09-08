@@ -394,19 +394,19 @@ contradiccion <- function(primer_termino, segundo_termino, tipo_proposicion){
   if(tipo_proposicion=="A"|tipo_proposicion=="Universal afirmativa"){
     print(paste("Original:", "Todo(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Contradictoria:", "Algun(a)", segundo_termino, "no es", primer_termino))
+                "Contradictoria:", "Algun(a)", primer_termino, "no es", segundo_termino))
   }else if(tipo_proposicion=="E"|tipo_proposicion=="Universal negativa"){
     print(paste("Original:", "Ningun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Contradictoria:", "Algun(a)", segundo_termino, "es", primer_termino))
+                "Contradictoria:", "Algun(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="I"|tipo_proposicion=="Particular afirmativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Contradictoria:", "Ningun(a)", segundo_termino, "es", primer_termino))
+                "Contradictoria:", "Ningun(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="O"|tipo_proposicion=="Particular negativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "no es", segundo_termino)) 
     print(paste(
-                "Contradictoria:", "Todo(a)", segundo_termino, "es", primer_termino))
+                "Contradictoria:", "Todo(a)", primer_termino, "es", segundo_termino))
   }else{
     print("Ingrese valores validos")
   }
@@ -428,19 +428,19 @@ subordinacion <- function(primer_termino, segundo_termino, tipo_proposicion){
   if(tipo_proposicion=="A"|tipo_proposicion=="Universal afirmativa"){
     print(paste("Original:", "Todo(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Subordinada:", "Algun(a)", segundo_termino, "es", primer_termino))
+                "Subordinada:", "Algun(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="E"|tipo_proposicion=="Universal negativa"){
     print(paste("Original:", "Ningun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Subordinada:", "Algun(a)", segundo_termino, "no es", primer_termino))
+                "Subordinada:", "Algun(a)", primer_termino, "no es", segundo_termino))
   }else if(tipo_proposicion=="I"|tipo_proposicion=="Particular afirmativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Subordinada:", "Todo(a)", segundo_termino, "es", primer_termino))
+                "Subordinada:", "Todo(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="O"|tipo_proposicion=="Particular negativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "no es", segundo_termino)) 
     print(paste(
-                "Subordinada:", "Ningun(a)", segundo_termino, "es", primer_termino))
+                "Subordinada:", "Ningun(a)", primer_termino, "es", segundo_termino))
   }else{
     print("Ingrese valores validos")
   }
@@ -462,19 +462,19 @@ oposicion <- function(primer_termino, segundo_termino, tipo_proposicion){
   if(tipo_proposicion=="A"|tipo_proposicion=="Universal afirmativa"){
     print(paste("Original:", "Todo(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Opuesta:", "Ningun(a)", segundo_termino, "es", primer_termino))
+                "Opuesta:", "Ningun(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="E"|tipo_proposicion=="Universal negativa"){
     print(paste("Original:", "Ningun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Opuesta:", "Todo(a)", segundo_termino, "es", primer_termino))
+                "Opuesta:", "Todo(a)", primer_termino, "es", segundo_termino))
   }else if(tipo_proposicion=="I"|tipo_proposicion=="Particular afirmativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "es", segundo_termino)) 
     print(paste(
-                "Opuesta:", "Algun(a)", segundo_termino, "no es", primer_termino))
+                "Opuesta:", "Algun(a)", primer_termino, "no es", segundo_termino))
   }else if(tipo_proposicion=="O"|tipo_proposicion=="Particular negativa"){
     print(paste("Original:", "Algun(a)", primer_termino, "no es", segundo_termino)) 
     print(paste(
-                "Opuesta:", "Algun(a)", segundo_termino, "es", primer_termino))
+                "Opuesta:", "Algun(a)", primer_termino, "es", segundo_termino))
   }else{
     print("Ingrese valores validos")
   }
@@ -495,20 +495,20 @@ oposicion <- function(primer_termino, segundo_termino, tipo_proposicion){
 Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
   if(tipo_proposicion=="A"|tipo_proposicion=="Universal afirmativa"){
     subordinacion(primer_termino, segundo_termino, tipo_proposicion)
-    print(paste("Opuesta:", "Ningun(a)", segundo_termino, "es", primer_termino))
-    print(paste("Contradictoria:", "Algun(a)", segundo_termino, "no es", primer_termino))
+    print(paste("Opuesta:", "Ningun(a)", primer_termino, "es", segundo_termino))
+    print(paste("Contradictoria:", "Algun(a)", primer_termino, "no es", segundo_termino))
   } else if(tipo_proposicion=="E"|tipo_proposicion=="Universal negativa"){
     subordinacion(primer_termino, segundo_termino, tipo_proposicion)
-    print(paste("Opuesta:", "Todo(a)", segundo_termino, "es", primer_termino))
-    print(paste("Contradictoria:", "Algun(a)", segundo_termino, "es", primer_termino))
+    print(paste("Opuesta:", "Todo(a)", primer_termino, "es", segundo_termino))
+    print(paste("Contradictoria:", "Algun(a)", primer_termino, "es", segundo_termino))
   } else if(tipo_proposicion=="I"|tipo_proposicion=="Particular afirmativa"){
     subordinacion(primer_termino, segundo_termino, tipo_proposicion)
-    print(paste("Opuesta:", "Algun(a)", segundo_termino, "no es", primer_termino))
-    print(paste("Contradictoria:", "Ningun(a)", segundo_termino, "es", primer_termino))
+    print(paste("Opuesta:", "Algun(a)", primer_termino, "no es", segundo_termino))
+    print(paste("Contradictoria:", "Ningun(a)", primer_termino, "es", segundo_termino))
   } else if(tipo_proposicion=="O"|tipo_proposicion=="Particular negativa"){
     subordinacion(primer_termino, segundo_termino, tipo_proposicion)
-    print(paste("Opuesta:", "Algun(a)", segundo_termino, "es", primer_termino))
-    print(paste("Contradictoria:", "Todo(a)", segundo_termino, "es", primer_termino))
+    print(paste("Opuesta:", "Algun(a)", primer_termino, "es", segundo_termino))
+    print(paste("Contradictoria:", "Todo(a)", primer_termino, "es", segundo_termino))
   } else {
     print("Ingrese valores válidos")
   }
