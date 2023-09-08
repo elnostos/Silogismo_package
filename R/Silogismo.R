@@ -172,8 +172,8 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
 #' @param figura La figura del silogismo entre comillas o en valor númerico.
 #' @return La figura del silogismo según el modo indicado, en caso de ser válido.
 #' @examples 
-#' silogismo1 <- primer_silogismo("Hombre", "Animal", "Piedra", "CAMENES", "Cuarto");
-#' silogismo2 <- primer_silogismo("Hombre", "Animal", "Piedra", "AAA", 1);
+#' silogismo1 <- figura_silogismo("Hombre", "Animal", "Piedra", "CAMENES", "Cuarto");
+#' silogismo2 <- figura_silogismo("Hombre", "Animal", "Piedra", "AAA", 1);
 #' @export
 
 figura_silogismo <- function(mayor, medio, menor, modo, figura) {
