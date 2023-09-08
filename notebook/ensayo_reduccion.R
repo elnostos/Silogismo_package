@@ -1,25 +1,66 @@
-primer_silogismo <- function(mayor, medio, menor, modo) {
-  if(modo=="BARBARA"| modo =="AAA") {
-   primera<- paste("P1:", "Todo(a)", medio, "es", mayor)
-   segunda<- paste("P2:", "Todo(a)", menor, "es", medio)
-   conclusion<- paste("Conclusion:", "Todo(a)", menor, "es", mayor)
-   print(primera)
-   print(segunda)
-   print(conclusion)
-   invisible(list(primera=primera, segunda=segunda, conclusion=conclusion))
-  } else if(modo=="CELARENT"| modo =="EAE") {
-    primera <- paste("P1:", "Ningun(a)", medio, "es", mayor)
-    primera <- paste("P2:", "Todo(a)", menor, "es", medio))
-    primera <- paste("Conclusion:", "Ningun(a)", menor, "es", mayor)
-  } else if(modo=="DARII"| modo =="AII") {
-    primera <- paste("P1:", "Todo(a)", medio, "es", mayor)
-    primera <- paste("P2:", "Algun(a)", menor, "es", medio)
-    primera <- paste("Conclusion:", "Algun(a)", menor, "es", mayor)
-  } else if(modo=="FERIO"| modo =="EIO") {
-    primera <- paste("P1:", "Ningun(a)", medio, "es", mayor)
-    primera <- paste("P2:", "Algun(a)", menor, "es", medio)
-    primera <- paste("Conclusion:", "Algun(a)", menor, "no es", mayor)
+silogismo<-function(mayor, medio, menor, forma, figura){
+ if(str_sub(forma,1,1)=="A" & (figura=="Primera"|figura=="Tercera")){
+   primera <- paste("Todo(a)", medio, "es", mayor)
+ } else if(str_sub(forma,1,1)=="E" & (figura=="Primera"|figura=="Tercera")){
+   primera <- paste("Ningun(a)", medio, "es", mayor)
+ } else if(str_sub(forma,1,1)=="I" & (figura=="Primera"|figura=="Tercera")){
+   primera <-paste("Algun(a)", medio, "es", mayor)
+ } else if(str_sub(forma,1,1)=="O" & (figura=="Primera"|figura=="Tercera")){
+   primera <- paste("Algun(a)", medio, "no es", mayor)
+ } else if(str_sub(forma,1,1)=="A" & (figura=="Segunda"|figura=="Cuarta")){
+   primera <- paste("Todo(a)", mayor, "es", medio)
+ } else if(str_sub(forma,1,1)=="E" & (figura=="Segunda"|figura=="Cuarta")){
+   primera <- paste("Ningun(a)", mayor, "es", medio)
+ } else if(str_sub(forma,1,1)=="I" & (figura=="Segunda"|figura=="Cuarta")){
+   primera <-paste("Algun(a)", mayor, "es", medio)
+ } else if(str_sub(forma,1,1)=="O" & (figura=="Segunda"|figura=="Cuarta")){
+   primera <- paste("Algun(a)", mayor, "no es", medio)
+ } else {
+   primera <- "Ingrese una letra válida para la primera proposición del silogismo"
+ }
+
+  if(str_sub(forma,2,2)=="A" & (figura=="Primera"|figura=="Segunda")){
+   segunda <- paste("Todo(a)", menor, "es", medio)
+ } else if(str_sub(forma,1,1)=="E" & (figura=="Primera"|figura=="Segunda")){
+   segunda <- paste("Ningun(a)", menor, "es", medio)
+ } else if(str_sub(forma,1,1)=="I" & (figura=="Primera"|figura=="Segunda")){
+   segunda <-paste("Algun(a)", menor, "es", medio)
+ } else if(str_sub(forma,1,1)=="O" & (figura=="Primera"|figura=="Segunda")){
+   segunda <- paste("Algun(a)", menor, "no es", medio)
+ } else if(str_sub(forma,1,1)=="A" & (figura=="Tercera"|figura=="Cuarta")){
+   segunda <- paste("Todo(a)", medio, "es", menor)
+ } else if(str_sub(forma,1,1)=="E" & (figura=="Tercera"|figura=="Cuarta")){
+   segunda <- paste("Ningun(a)", medio, "es", menor)
+ } else if(str_sub(forma,1,1)=="I" & (figura=="Tercera"|figura=="Cuarta")){
+   segunda <-paste("Algun(a)", medio, "es", menor)
+ } else if(str_sub(forma,1,1)=="O" & (figura=="Tercera"|figura=="Cuarta")){
+   segunda <- paste("Algun(a)", medio, "no es", menor)
+ } else {
+   segunda <- "Ingrese una letra válida para la segunda proposición del silogismo"
+ }
+
+  if(str_sub(forma,3,3)=="A"){
+    conclusion<-paste("Todo(a)", menor, "es", mayor)
+  } else if(str_sub(forma,3,3)=="E"){
+    conclusion<-paste("Ningun(a)", menor, "es", mayor)
+  } else if(str_sub(forma,3,3)=="I"){
+    conclusion<-paste("Algun(a)", menor, "es", mayor)
+  } else if(str_sub(forma,3,3)=="O"){
+    conclusion<-paste("Algun(a)", menor, "no es", mayor)
   } else {
-    print("Figura invalida del primer silogismo")
+    conclusion <- "Ingrese una letra válida para la conclusion del silogismo"
   }
+  
+  print(paste("Primera premisa:", primera))
+  print(paste("Segunda premisa:", segunda))
+  print(paste("Conclusion:", conclusion))
 }
+  
+
+  
+  
+  
+  
+  
+  
+
