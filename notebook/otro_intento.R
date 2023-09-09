@@ -14,7 +14,31 @@ library(stringr)
 #  }
 #}
 
-absurdo<-function(valor, figura){
+
+comb_p1<-c("AB","BA")
+comb_p2<-c("CA","AC")
+comb_fig<-c("AA","AE","AI","AO",
+            "EA","EE","EI","EO",
+            "IA","IE","II","IO",
+            "OA","OE","OI","OO")
+
+
+formis<-function(AB, CA){
+  if(str_sub(AB,1,1)==str_sub(CA,2,2)){
+    1
+  } else if(str_sub(AB,2,2)==str_sub(CA,2,2)){
+    2
+  } else if(str_sub(AB,1,1)==str_sub(CA,1,1)){
+    3
+  } else if(str_sub(AB,2,2)==str_sub(CA,1,1)){
+    4
+  } else{
+    print("Ingrese valores válidos")
+  }
+}
+
+absurdo<-function(AB, CA, valor){
+  
   axiomas<-c("AAA","EAE","AII","EIO")
 
   if(str_sub(valor,3,3)=="A"){
@@ -29,56 +53,41 @@ absurdo<-function(valor, figura){
     print("Ingrese un modo válido")
   }
    
-  
-  if((valor %in% axiomas)== TRUE & figura==1){
+  if((valor %in% axiomas)== TRUE & formis(AB,CA)==1){
     print("Axioma de la primera figura del silogismo")
-  } else if(valor=="EAE" & figura ==2){
-      print("Resolver por EAE de la primera figura")
-    } else if(valor=="AEE" & figura==2){
-      print("Resolver por EAE de la primera figura")
-    } else if(valor=="EIO" & figura==2){
-      print("Resolver por EIO de la primera figura")
-    } else if(valor=="AII" & figura==3){
-      print("Resolver por AII de la primera figura")
-    } else if(valor=="IAI" & figura==3){
-      print("Resolver por AII de la primera figura")
-    } else if(valor=="EIO" & figura==3){
-      print("Resolver por EIO de la primera figura")
-    } else if(valor=="AAI" & figura==3){
-      print("Resolver por AII de la primera figura")
-    } else if(valor=="EAO" & figura==3){
-      print("Resolver por EIO de la primera figura")
-    } else if(valor=="AAI" & figura==4){
-      print("Resolver por AAA de la primera figura")
-    } else if(valor=="EAO" & figura==4){
-      print("Resolver por EIO de la primera figura")
-    } else if(valor=="AEE" & figura==4){
-      print("Resolver por EAE de la primera figura")
-    } else if(valor=="IAI" & figura==4){
-      print("Resolver por AII de la primera figura")
-    } else if(valor=="EIO" & figura==4){
-      print("Resolver por EIO de la primera figura")
-    } else if((paste(c(str_sub(valor,1,1),contr, "A"), collapse=''))%in% axiomas == TRUE & figura==2){
-        print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "A"), collapse=''),"de la primera figura del silogismo"))
-      } else {
-        print("Hola amigo")
-      }
+    
+    } else if((paste(c(str_sub(valor,1,1),contr, "A"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+      print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "A"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(str_sub(valor,1,1),contr, "E"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+      print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "E"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(str_sub(valor,1,1),contr, "I"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+      print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "I"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(str_sub(valor,1,1),contr, "O"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+      print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "O"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(contr, str_sub(valor,2,2), "A"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+      print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "A"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(contr, str_sub(valor,2,2), "E"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+      print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "E"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(contr, str_sub(valor,2,2), "I"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+      print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "I"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else if((paste(c(contr, str_sub(valor,2,2), "O"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+      print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "O"), collapse=''),"de la primera figura del silogismo"))
+    
+    } else {
+      print("No puede realizarse reducción al absurdo")
+    }
 } 
 
 
-figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio){
-  if(termino_medio==sujeto1 & termino_medio==predicado2){
-    print("Primera figura del silogismo")
-  } else if(termino_medio==predicado1 & termino_medio==predicado2){
-    print("Segunda figura del silogismo")
-  } else if(termino_medio==sujeto1 & termino_medio==sujeto2){
-    print("Tercera figura del silogismo")
-  } else if(termino_medio==predicado1 & termino_medio==sujeto2){
-    print("Cuarta figura del silogismo")
-  } else {
-    print("Ingrese valores validos")
-  }
-}
+
+
 
 
 

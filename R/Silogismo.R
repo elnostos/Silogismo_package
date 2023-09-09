@@ -540,3 +540,66 @@ numero_figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio)
     print("Ingrese valores validos")
   }
 }
+
+
+#' Reduccion al absurdo
+#'
+#' A partir de la forma de las primera y segunda premisa, asi como la figura del
+#' silogismo dice que forma debe tener el silogismo a evaluar en reduccion al absurdo,
+#' o si este no es posible resolver por dicho metodo. Todavia no realiza la demostracion
+#' completa de la reduccion al absurdo 
+#' @param AB Corresponde a la primera premisa.
+#' @param CA Corresponde a la segunda premisa.
+#' @param valor Corresponde a la forma de la figura.
+#' @examples 
+#' reductio1 <- absurdo("AB", "CA", "AAA");
+#' reductio2 <- absurdo("BA", "CA", "EAE");
+#' @export
+
+absurdo<-function(AB, CA, valor){
+  
+  axiomas<-c("AAA","EAE","AII","EIO")
+  
+  if(str_sub(valor,3,3)=="A"){
+    contr<-"O"
+  } else if(str_sub(valor,3,3)=="E"){
+    contr<-"I"
+  } else if(str_sub(valor,3,3)=="I"){
+    contr<-"E"
+  } else if(str_sub(valor,3,3)=="O"){
+    contr<-"A"
+  } else {
+    print("Ingrese un modo válido")
+  }
+  
+  if((valor %in% axiomas)== TRUE & formis(AB,CA)==1){
+    print("Axioma de la primera figura del silogismo")
+    
+  } else if((paste(c(str_sub(valor,1,1),contr, "A"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+    print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "A"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(str_sub(valor,1,1),contr, "E"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+    print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "E"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(str_sub(valor,1,1),contr, "I"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+    print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "I"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(str_sub(valor,1,1),contr, "O"), collapse='')) %in% axiomas == TRUE & formis(AB,"CB")==1){
+    print(paste("Resolver por la forma",paste(c(str_sub(valor,1,1),contr, "O"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(contr, str_sub(valor,2,2), "A"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+    print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "A"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(contr, str_sub(valor,2,2), "E"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+    print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "E"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(contr, str_sub(valor,2,2), "I"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+    print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "I"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else if((paste(c(contr, str_sub(valor,2,2), "O"), collapse='')) %in% axiomas == TRUE & formis("CB", CA)==1){
+    print(paste("Resolver por la forma",paste(c(contr, str_sub(valor,2,2), "O"), collapse=''),"de la primera figura del silogismo"))
+    
+  } else {
+    print("No puede realizarse reducción al absurdo")
+  }
+} 

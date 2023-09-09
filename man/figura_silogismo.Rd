@@ -25,6 +25,6 @@ Si el modo es válido, devuelve la figura indicada del silogismo a partir de los
 Si el modo es inválido, devuelve una advertencia.
 }
 \examples{
-silogismo1 <- primer_silogismo("Hombre", "Animal", "Piedra", "CAMENES", "Cuarto");
-silogismo2 <- primer_silogismo("Hombre", "Animal", "Piedra", "AAA", 1);
+silogismo1 <- figura_silogismo("Hombre", "Animal", "Piedra", "CAMENES", "Cuarto");
+silogismo2 <- figura_silogismo("Hombre", "Animal", "Piedra", "AAA", 1);
 }
