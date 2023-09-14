@@ -17,8 +17,7 @@ tercer_silogismo(mayor, medio, menor, modo)
 La tercera figura del silogismo según el modo indicado, en caso de ser válido.
 }
 \description{
-Si el modo es válido, devuelve la tercera figura del silogismo con el modo indicado.
-Si el modo es inválido, devuelve una advertencia.
+Tercera figura del silogismo
 }
 \examples{
 silogismo1 <- tercer_silogismo("Hombre", "Animal", "Piedra", "DATISIS");

@@ -17,7 +17,7 @@ Boecio(primer_termino, segundo_termino, tipo_proposicion)
 La proposición original, su opuesta, subordinada y contradictoria.
 }
 \description{
-Devuelve la proposición original, su opuesta, subordinada y contradictoria para los términos y el tipo de proposición específicados.
+Cuadro de Boecio o de oposición de los juicios
 }
 \examples{
 Boecio1 <- Boecio("Hombre", "Humano", "O");

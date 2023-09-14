@@ -17,7 +17,7 @@ oposicion(primer_termino, segundo_termino, tipo_proposicion)
 La proposición original y su opuesta.
 }
 \description{
-Devuelve la proposición original y su opuesta para los términos y el tipo de proposición específicados.
+Oposición
 }
 \examples{
 oposicion1 <- oposicion("Hombre", "Humano", "O");

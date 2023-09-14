@@ -14,10 +14,7 @@ absurdo(AB, CA, valor)
 \item{valor}{Corresponde a la forma de la figura.}
 }
 \description{
-A partir de la forma de las primera y segunda premisa, asi como la figura del
-silogismo dice que forma debe tener el silogismo a evaluar en reduccion al absurdo,
-o si este no es posible resolver por dicho metodo. Todavia no realiza la demostracion
-completa de la reduccion al absurdo
+Reduccion al absurdo
 }
 \examples{
 reductio1 <- absurdo("AB", "CA", "AAA");

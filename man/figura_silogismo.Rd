@@ -21,8 +21,7 @@ figura_silogismo(mayor, medio, menor, modo, figura)
 La figura del silogismo según el modo indicado, en caso de ser válido.
 }
 \description{
-Si el modo es válido, devuelve la figura indicada del silogismo a partir de los términos definidos.
-Si el modo es inválido, devuelve una advertencia.
+Figura Silogismo
 }
 \examples{
 silogismo1 <- figura_silogismo("Hombre", "Animal", "Piedra", "CAMENES", "Cuarto");

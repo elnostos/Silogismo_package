@@ -17,8 +17,7 @@ cuarto_silogismo(mayor, medio, menor, modo)
 La cuarta figura del silogismo según el modo indicado, en caso de ser válido.
 }
 \description{
-Si el modo es válido, devuelve la cuarta figura del silogismo con el modo indicado.
-Si el modo es inválido, devuelve una advertencia.
+Cuarta figura del silogismo
 }
 \examples{
 silogismo1 <- cuarto_silogismo("Hombre", "Animal", "Piedra", "CAMENES");
