@@ -583,7 +583,6 @@ absurdo<-function(AB, CA, valor){
     } else{
       print("Ingrese valores válidos")
     }
-  }
   
   axiomas<-c("AAA","EAE","AII","EIO")
   
