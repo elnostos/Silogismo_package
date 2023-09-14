@@ -572,17 +572,19 @@ numero_figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio)
 
 absurdo<-function(AB, CA, valor){
   
+  formis<-function(AB, CA){
     if(str_sub(AB,1,1)==str_sub(CA,2,2)){
-      formis<-1
+      1
     } else if(str_sub(AB,2,2)==str_sub(CA,2,2)){
-      formis<-2
+      2
     } else if(str_sub(AB,1,1)==str_sub(CA,1,1)){
-      formis<-3
+      3
     } else if(str_sub(AB,2,2)==str_sub(CA,1,1)){
-      formis<-4
+      4
     } else{
       print("Ingrese valores válidos")
     }
+  }
   
   axiomas<-c("AAA","EAE","AII","EIO")
   
