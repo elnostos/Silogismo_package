@@ -15,7 +15,7 @@ forma_reduccion_absurdo(modo, figura)
 La forma axiomática del primer silogismo para resolver por reducción al absurdo.
 }
 \description{
-Forma axiomática para reducción al absurdo
+Si el modo es válido, devuelve la forma axiomática del primer silogismo para resolver por reducción al absurdo.
 }
 \examples{
 forma_absurdo_silogismo1 <- forma_reduccion_absurdo("BAROCO", "Segunda");

@@ -17,7 +17,7 @@ subordinacion(primer_termino, segundo_termino, tipo_proposicion)
 La proposición original y su subordinada.
 }
 \description{
-Subordinación
+Devuelve la proposición original y su subordinada para los términos y el tipo de proposición específicados.
 }
 \examples{
 subordinacion1 <- subordinacion("Hombre", "Humano", "O");

@@ -17,7 +17,7 @@ contradiccion(primer_termino, segundo_termino, tipo_proposicion)
 La proposición original y su contradictoria.
 }
 \description{
-Contradicción
+Devuelve la proposición original y su contradicción para los términos y el tipo de proposición específicados.
 }
 \examples{
 contradiccion1 <- contradiccion("Hombre", "Humano", "O");

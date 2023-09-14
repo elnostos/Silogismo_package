@@ -1,6 +1,5 @@
 #' Primera figura del silogismo
 #'
-#'@import stringr
 #' Si el modo es válido, devuelve la primera figura del silogismo con el modo indicado.
 #' Si el modo es inválido, devuelve una advertencia. 
 #' @param mayor El término mayor entre comillas.
@@ -36,7 +35,6 @@ primer_silogismo <- function(mayor, medio, menor, modo) {
 
 #' Segunda figura del silogismo
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la segunda figura del silogismo con el modo indicado.
 #' Si el modo es inválido, devuelve una advertencia. 
 #' @param mayor El término mayor entre comillas.
@@ -72,7 +70,6 @@ segundo_silogismo <- function(mayor, medio, menor, modo) {
 
 #' Tercera figura del silogismo
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la tercera figura del silogismo con el modo indicado.
 #' Si el modo es inválido, devuelve una advertencia. 
 #' @param mayor El término mayor entre comillas.
@@ -122,7 +119,6 @@ tercer_silogismo <- function(mayor, medio, menor, modo) {
 
 #' Cuarta figura del silogismo
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la cuarta figura del silogismo con el modo indicado.
 #' Si el modo es inválido, devuelve una advertencia. 
 #' @param mayor El término mayor entre comillas.
@@ -167,7 +163,6 @@ cuarto_silogismo <- function(mayor, medio, menor, modo) {
 
 #' Figura Silogismo
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la figura indicada del silogismo a partir de los términos definidos.
 #' Si el modo es inválido, devuelve una advertencia. 
 #' @param mayor El término mayor entre comillas.
@@ -197,7 +192,6 @@ figura_silogismo <- function(mayor, medio, menor, modo, figura) {
 
 #' Forma axiomática
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la forma axiomática de la primera figura del silogismo. 
 #' @param modo El modo del silogismo entre comillas.
 #' @param figura La figura del silogismo entre comillas o en valor númerico.
@@ -275,7 +269,6 @@ forma_axiomatica <- function(modo, figura) {
 
 #' Forma axiomática para reducción al absurdo
 #'
-#' @import stringr
 #' Si el modo es válido, devuelve la forma axiomática del primer silogismo para resolver por reducción al absurdo. 
 #' @param modo El modo del silogismo entre comillas.
 #' @param figura La figura del silogismo entre comillas o en valor númerico.
@@ -353,7 +346,6 @@ forma_reduccion_absurdo <- function(modo, figura) {
 
 #' Regla de conversión
 #'
-#' @import stringr
 #' Devuelve la proposición original y su conversa para los términos y el tipo de proposición específicados. 
 #' @param primer_termino Corresponde al sujeto de la proposición original entre comillas.
 #' @param segundo_termino Corresponde al predicado de la proposición original entre comillas.
@@ -388,7 +380,6 @@ conversion <- function(primer_termino, segundo_termino, tipo_proposicion){
 
 #' Contradicción
 #'
-#' @import stringr
 #' Devuelve la proposición original y su contradicción para los términos y el tipo de proposición específicados. 
 #' @param primer_termino Corresponde al sujeto de la proposición original entre comillas.
 #' @param segundo_termino Corresponde al predicado de la proposición original entre comillas.
@@ -423,7 +414,6 @@ contradiccion <- function(primer_termino, segundo_termino, tipo_proposicion){
 
 #' Subordinación
 #'
-#' @import stringr
 #' Devuelve la proposición original y su subordinada para los términos y el tipo de proposición específicados. 
 #' @param primer_termino Corresponde al sujeto de la proposición original entre comillas.
 #' @param segundo_termino Corresponde al predicado de la proposición original entre comillas.
@@ -458,7 +448,6 @@ subordinacion <- function(primer_termino, segundo_termino, tipo_proposicion){
 
 #' Oposición
 #'
-#' @import stringr
 #' Devuelve la proposición original y su opuesta para los términos y el tipo de proposición específicados. 
 #' @param primer_termino Corresponde al sujeto de la proposición original entre comillas.
 #' @param segundo_termino Corresponde al predicado de la proposición original entre comillas.
@@ -493,7 +482,6 @@ oposicion <- function(primer_termino, segundo_termino, tipo_proposicion){
 
 #' Cuadro de Boecio o de oposición de los juicios
 #'
-#' @import stringr
 #' Devuelve la proposición original, su opuesta, subordinada y contradictoria para los términos y el tipo de proposición específicados. 
 #' @param primer_termino Corresponde al sujeto de la proposición original entre comillas.
 #' @param segundo_termino Corresponde al predicado de la proposición original entre comillas.
@@ -528,7 +516,6 @@ Boecio<-function(primer_termino, segundo_termino, tipo_proposicion){
 
 #' Figura Silogismo
 #'
-#' @import stringr
 #' A partir de la definicion de los sujetos y predicados de las premisas, asi como del termino medio, devuelve la figura del silogismo correspondiente. 
 #' @param predicado1 Corresponde al predicado de la primera premisa.
 #' @param sujeto1 Corresponde al sujeto de la primera premisa.
@@ -557,7 +544,6 @@ numero_figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio)
 
 #' Reduccion al absurdo
 #'
-#' @import stringr
 #' A partir de la forma de las primera y segunda premisa, asi como la figura del
 #' silogismo dice que forma debe tener el silogismo a evaluar en reduccion al absurdo,
 #' o si este no es posible resolver por dicho metodo. Todavia no realiza la demostracion

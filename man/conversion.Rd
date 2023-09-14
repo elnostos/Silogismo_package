@@ -17,7 +17,7 @@ conversion(primer_termino, segundo_termino, tipo_proposicion)
 La proposición original y su conversa.
 }
 \description{
-Regla de conversión
+Devuelve la proposición original y su conversa para los términos y el tipo de proposición específicados.
 }
 \examples{
 conversion1 <- conversion("Hombre", "Humano", "O");

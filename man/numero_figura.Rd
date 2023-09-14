@@ -18,7 +18,7 @@ numero_figura(sujeto1, predicado1, sujeto2, predicado2, termino_medio)
 \item{termino_medio}{Corresponde al termino medio del silogismo.}
 }
 \description{
-Figura Silogismo
+A partir de la definicion de los sujetos y predicados de las premisas, asi como del termino medio, devuelve la figura del silogismo correspondiente.
 }
 \examples{
 figura1 <- numero_figura("Hombre", "Caballo", "Animal", "Caballo", "Caballo");

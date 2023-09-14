@@ -15,7 +15,7 @@ forma_axiomatica(modo, figura)
 La figura axiomática del primer silogismo para el modo y figura especificados, en caso de ser válidos.
 }
 \description{
-Forma axiomática
+Si el modo es válido, devuelve la forma axiomática de la primera figura del silogismo.
 }
 \examples{
 forma_primer_silogismo1 <- forma_axiomatica("BAROCO", "Segunda");
