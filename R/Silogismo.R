@@ -558,6 +558,8 @@ numero_figura<-function(sujeto1, predicado1, sujeto2, predicado2, termino_medio)
 
 absurdo<-function(AB, CA, valor){
   
+  library(stringr)
+  
   formis<-function(AB, CA){
     if(str_sub(AB,1,1)==str_sub(CA,2,2)){
       1
